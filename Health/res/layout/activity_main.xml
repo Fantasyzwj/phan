@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp" 
+>
+
+    <TextView 
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="10pt"
+        android:gravity="center_horizontal" 
+        android:text="欢迎使用儿童健康测评软件"/>
+    <Button
+        android:id="@+id/classButton0"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:text="儿童健康行为测评" />
+    <Button
+        android:id="@+id/classButton1"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classButton0"
+        android:text="儿童心理健康测评" />
+    <Button
+        android:id="@+id/classButton2"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classButton1"
+        android:text="儿童智力水平测评" />
+</RelativeLayout>

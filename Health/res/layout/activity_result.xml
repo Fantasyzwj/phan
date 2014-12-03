@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:padding="30dp">
+    <TextView
+        android:id="@+id/title"
+        android:textSize="25sp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="评测结果:"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:id="@+id/resulttext"
+        android:textSize="20sp"
+        android:layout_below="@id/title"
+        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:text="评测结果"
+        android:textColor="#000000"
+        />
+	<Button
+	    android:id="@+id/homeButton"
+        android:textSize="20sp"
+        android:layout_below="@id/resulttext"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignRight="@id/resulttext"
+        android:text="返回主页面"
+        android:textColor="#000000"
+	    />
+</RelativeLayout>
