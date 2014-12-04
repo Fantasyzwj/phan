@@ -91,7 +91,7 @@ public class TableView extends Activity{
 		{
 			Map<String, String> map = new HashMap<String, String>();
 			map.put("tableType", tableType);
-			String url = "http://172.27.35.1/My_Child/admin.php/Question/question";
+			String url = "http://192.185.2.37/~wenbo/admin.php/Question/question";
 			return new JSONObject(HttpUtil.postRequest(url, map));
 		}
 

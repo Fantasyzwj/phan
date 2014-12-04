@@ -108,7 +108,7 @@ public class Sign extends Activity
 		map.put("username", username);
 		map.put("userpwd", userpwd);
 		// 定义发送请求的URL
-		String url = "http://172.27.35.1/My_Child/admin.php/Register/doReg";
+		String url = "http://192.185.2.37/~wenbo/admin.php/Register/doReg";
 		// 发送请求
 		return new JSONObject(HttpUtil.postRequest(url, map));
 	}

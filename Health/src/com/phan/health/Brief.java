@@ -146,7 +146,7 @@ public class Brief extends Activity{
 			map.put("childname", name);
 			map.put("childage", age);
 			map.put("childsex", sex);
-			String url = "http://172.27.35.1/My_Child/admin.php/Question/question";
+			String url = "http://192.185.2.37/~wenbo/admin.php/Question/question";
 			return new JSONObject(HttpUtil.postRequest(url, map));
 		}
 
