@@ -151,7 +151,7 @@ public class threeoptions extends Activity{
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("tableneirong", tablename);
 		// 定义发送请求的URL
-		String url = "http://172.27.35.1/My_Child/admin.php/Question/question";			// 发送请求
+		String url = "http://192.185.2.37/~wenbo/admin.php/Question/question";			// 发送请求
 		return new JSONObject(HttpUtil.postRequest(url, map));
 	}
 	private JSONObject getresult()
@@ -162,7 +162,7 @@ public class threeoptions extends Activity{
 		for (int i=1;i<=maxnum;i++) map.put(y[i], ans[i]);
 		map.put("tableneirong", tablename);
 		// 定义发送请求的URL
-		String url = "http://172.27.35.1/My_Child/admin.php/Question/question";			// 发送请求
+		String url = "http://192.185.2.37/~wenbo/admin.php/Question/question";			// 发送请求
 		return new JSONObject(HttpUtil.postRequest(url, map));
 	}
 }
