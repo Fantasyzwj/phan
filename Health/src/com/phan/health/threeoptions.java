@@ -116,26 +116,35 @@ public class threeoptions extends Activity{
 					getmemory();
 				} else {
 					//提交问卷
-					JSONObject jsonObj;
-					try
-					{
-						jsonObj = getresult();
-						String result = jsonObj.getString("result");
-						Intent intent = new Intent(threeoptions.this,Result.class);
-					    //向下一个activity传送结果
-					    intent.putExtra("result",result);
-					    startActivity(intent);
-					    finish();
-					}
-					catch (Exception e)
-					{
+					if (finishall()){
+						JSONObject jsonObj;
+						try
+						{
+							jsonObj = getresult();
+							String result = jsonObj.getString("result");
+							Intent intent = new Intent(threeoptions.this,Result.class);
+					    	//向下一个activity传送结果
+					    	intent.putExtra("result",result);
+					    	startActivity(intent);
+					    	finish();
+						}
+						catch (Exception e)
+						{
+							AlertDialog.Builder dialog=new AlertDialog.Builder(threeoptions.this);
+							dialog.setMessage("服务器相应异常，请稍后再试").setPositiveButton("确定", null).show();
+							e.printStackTrace();
+						}
+					} else {
 						AlertDialog.Builder dialog=new AlertDialog.Builder(threeoptions.this);
-						dialog.setMessage("服务器相应异常，请稍后再试").setPositiveButton("确定", null).show();
-						e.printStackTrace();
+						dialog.setMessage("您还有问题没有填完，请将问卷填完后再提交!").setPositiveButton("确定", null).show();
 					}
 				}
 			}
 		}
+	}
+	private boolean finishall(){
+		for (int i=1;i<=maxnum;i++) if (ans[i].equals("0")) return false;
+		return true;
 	}
 	private void getmemory(){
 		question.setText(questionnum+"."+questiontext[questionnum]);
